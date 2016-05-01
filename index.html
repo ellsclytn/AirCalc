@@ -10,30 +10,58 @@
 </head>
 <body>
   <div class="container">
-    <form>
-      <div class="form-group">
-        <h3>Hobbs Meter Difference</h3>
-        <label for="hobbs1">Input 1</label>
-        <input type="number" class="form-control" id="hobbs1" placeholder="Hobbs Meter 1">
-        <label for="hobbs2">Input 2</label>
-        <input type="number" class="form-control" id="hobbs2" placeholder="Hobbs Meter 2">
-        <label for="hobbsDecimal">Output (Decimal Hours)</label>
-        <input type="text" class="form-control" id="hobbsDecimal" placeholder="Decimal" readonly>
-        <label for="hobbsHm">Output (Hours and Minutes)</label>
-        <input type="text" class="form-control" id="hobbsHm" placeholder="Hours &amp; Minutes" readonly>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="hobbsLabel">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#hobbsCollapse" aria-expanded="true" aria-controls="hobbsCollapse">
+              Hobbs Meter Difference
+            </a>
+          </h4>
+        </div>
+        <div id="hobbsCollapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="hobbsLabel">
+          <div class="panel-body">
+            <form>
+              <div class="form-group">
+                <label for="hobbs1">Input 1</label>
+                <input type="number" class="form-control" id="hobbs1" placeholder="Hobbs Meter 1">
+                <label for="hobbs2">Input 2</label>
+                <input type="number" class="form-control" id="hobbs2" placeholder="Hobbs Meter 2">
+                <label for="hobbsDecimal">Output (Decimal Hours)</label>
+                <input type="text" class="form-control" id="hobbsDecimal" placeholder="Decimal" readonly>
+                <label for="hobbsHm">Output (Hours and Minutes)</label>
+                <input type="text" class="form-control" id="hobbsHm" placeholder="Hours &amp; Minutes" readonly>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <h3>Hours &amp; Minutes Addition</h3>
-        <label for="hm1">Input 1</label>
-        <input type="text" class="form-control" id="hm1" placeholder="Hours &amp; Minutes, eg 1:23">
-        <label for="hm2">Input 2</label>
-        <input type="text" class="form-control" id="hm2" placeholder="Hours &amp; Minutes, eg 1:23">
-        <label for="hmOutD">Output (Decimal Hours)</label>
-        <input type="text" class="form-control" id="hmOutD" placeholder="Decimal" readonly>
-        <label for="hmOutHm">Output (Hours and Minutes)</label>
-        <input type="text" class="form-control" id="hmOutHm" placeholder="Hours &amp; Minutes" readonly>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="hmLabel">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#hmCollapse" aria-expanded="true" aria-controls="hmCollapse">
+              Hours &amp; Minutes Addition
+            </a>
+          </h4>
+        </div>
+        <div id="hmCollapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="hmLabel">
+          <div class="panel-body">
+            <form>
+              <div class="form-group">
+                <label for="hm1">Input 1</label>
+                <input type="text" class="form-control" id="hm1" placeholder="Hours &amp; Minutes, eg 1:23">
+                <label for="hm2">Input 2</label>
+                <input type="text" class="form-control" id="hm2" placeholder="Hours &amp; Minutes, eg 1:23">
+                <label for="hmOutD">Output (Decimal Hours)</label>
+                <input type="text" class="form-control" id="hmOutD" placeholder="Decimal" readonly>
+                <label for="hmOutHm">Output (Hours and Minutes)</label>
+                <input type="text" class="form-control" id="hmOutHm" placeholder="Hours &amp; Minutes" readonly>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-    </form>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
